@@ -8,6 +8,7 @@ interface Props {
 interface ILinks {
     name: string;
     url: string;
+    openLinkInNewTab?: boolean;
 }
 
 const {techUsed, links, title} = Astro.props;
@@ -82,7 +83,7 @@ const {techUsed, links, title} = Astro.props;
     </p>
     <div class="links">
         {links?.map((link) => {
-            return (<a href={link.url}>{link.name}</a>)
+            return (<a href={link.url} target={link.openLinkInNewTab ? "_blank" : "_self"}>{link.name}</a>)
         })}
     </div>
 </div>
