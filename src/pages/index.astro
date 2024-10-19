@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {getCollection} from "astro:content";
+import Project from "../components/Project.astro";
+import WorkExperience from "../components/WorkExperience.astro";
+const pageTitle = "Manpreet";
+const allProjects = await getCollection("projects");
+---
+<Layout pageTitle={pageTitle}>
+    <h4>Manpreet</h4>
+    <p>
+        Hi,I'm Manpreet! I'm a software engineer with experience in full-stack development, focusing primarily
+        on the back-end. I've worked with technologies like Java, Kotlin, AWS, and PostgreSQL during my internship,
+        contributing to full-stack applications. I enjoy solving problems, working with teams, and building
+        things that have real impact.
+    </p>
+    <h4>Work Experience</h4>
+    <WorkExperience/>
+    <h4>Projects</h4>
+    <p>
+        Here are some of the projects I have worked on.
+    </p>
+    <div role="list" class="projects-container">
+        {allProjects.map((card) =>
+                <Project
+                        url={`/projects/${card.slug}/`}
+                        title={card.data.title}
+                        body={card.data.description}
+                />)}
+    </div>
+</Layout>
+

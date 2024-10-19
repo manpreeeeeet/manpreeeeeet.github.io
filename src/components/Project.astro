@@ -1,0 +1,72 @@
+---
+interface Props {
+    url: string;
+    title: string;
+    body: string;
+}
+
+const {url, title, body} = Astro.props;
+---
+
+<style>
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--underline);
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+
+    .tech-used {
+        display: flex;
+        gap: 0.5em;
+        font-size: 0.8em;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 0.8em;
+    }
+
+    .links {
+        margin-top: 1em;
+    }
+
+    .links a {
+        border: 1px solid var(--underline);
+        padding: 10px;
+    }
+
+    .links a:hover {
+        background-color: var(--button);
+        color: var(--text-light);
+        cursor: pointer;
+    }
+
+</style>
+
+<div class="project-card">
+    <h4>yesyes</h4>
+    <div class="tech-used">
+        <div>Kotlin</div>
+        <div>|</div>
+        <div>Java</div>
+        <div>|</div>
+        <div>AWS</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Assumenda consequuntur doloremque ducimus ex expedita quam qui similique sunt, vel voluptates. A amet,
+        blanditiis debitis dolore eius facilis hic illum impedit laboriosam mollitia nesciunt numquam perspiciatis quae
+        quos repellendus totam veniam?
+    </p>
+    <div class="links">
+        <a>details</a>
+        <a>details</a>
+        <a>details</a>
+    </div>
+</div>
