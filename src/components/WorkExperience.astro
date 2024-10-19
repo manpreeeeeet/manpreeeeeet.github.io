@@ -1,5 +1,12 @@
 ---
+interface Props {
+    companyName: string;
+    workDate: string;
+    roleName: string;
+}
 
+
+const {companyName, workDate, roleName} = Astro.props;
 ---
 
 <style>
@@ -30,38 +37,15 @@
         margin-left: 0;
         list-style-position: inside;
     }
-
-    ul li {
-        padding-left: 20px;
-        text-indent: -20px;
-    }
-
-    .work-details > div {
-        //font-size: 0.8em;
-    }
 </style>
 
 <div class="work-card">
     <div class="work-details">
-        <h5 class="company-name">Invidi Technologies</h5>
-        <div>May 2023 - Sep 2024</div>
+        <h5 class="company-name">{companyName}</h5>
+        <div>{workDate}</div>
     </div>
-    <div>Software Engineer Intern</div>
+    <div>{roleName}</div>
     <ul>
-        <li>
-            Added new metrics and feature support for ad forecasting software on both the frontend and backend using
-            <strong>Vue.js</strong> and <strong>Kotlin</strong>.
-        </li>
-        <li>
-            Wrote code to support OAuth and migrated old systems from <strong>AWS IAM</strong> to <strong>OAuth</strong>
-        </li>
-        <li>
-            Developed back-end code using Kotlin for a centralized event notification service, used Terraform for
-            Infrastructure as Code (IaC) to deploy the service to AWS, and implemented CI/CD pipelines.
-        </li>
-        <li>
-            Wrote unit and integration tests to ensure software quality, and reduced CI build time by 20% by creating a
-            custom Docker image that allowed sharing the image between multiple CI steps.
-        </li>
+        <slot/>
     </ul>
 </div>

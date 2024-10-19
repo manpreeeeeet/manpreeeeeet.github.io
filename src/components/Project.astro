@@ -1,11 +1,16 @@
 ---
 interface Props {
-    url: string;
     title: string;
-    body: string;
+    techUsed: string[];
+    links?: ILinks[];
 }
 
-const {url, title, body} = Astro.props;
+interface ILinks {
+    name: string;
+    url: string;
+}
+
+const {techUsed, links, title} = Astro.props;
 ---
 
 <style>
@@ -35,6 +40,8 @@ const {url, title, body} = Astro.props;
 
     .links {
         margin-top: 1em;
+        display: flex;
+        gap: 0.5em;
     }
 
     .links a {
@@ -48,25 +55,34 @@ const {url, title, body} = Astro.props;
         cursor: pointer;
     }
 
+    a, a:visited, a:hover, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
 </style>
 
 <div class="project-card">
-    <h4>yesyes</h4>
+    <h4>{title}</h4>
     <div class="tech-used">
-        <div>Kotlin</div>
-        <div>|</div>
-        <div>Java</div>
-        <div>|</div>
-        <div>AWS</div>
+        {techUsed?.map((tech, index) => {
+            if (index == techUsed.length - 1) {
+                return (
+                        <div>{tech}</div>)
+            } else {
+                return (
+                        <div>{tech}</div>
+                        <div>|</div>
+                )
+            }
+        })}
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Assumenda consequuntur doloremque ducimus ex expedita quam qui similique sunt, vel voluptates. A amet,
-        blanditiis debitis dolore eius facilis hic illum impedit laboriosam mollitia nesciunt numquam perspiciatis quae
-        quos repellendus totam veniam?
+    <p>
+        <slot name="description"/>
     </p>
     <div class="links">
-        <a>details</a>
-        <a>details</a>
-        <a>details</a>
+        {links?.map((link) => {
+            return (<a href={link.url}>{link.name}</a>)
+        })}
     </div>
 </div>

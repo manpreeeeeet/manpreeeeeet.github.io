@@ -1,0 +1,53 @@
+---
+import Project from "./Project.astro";
+---
+
+<style>
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    p {
+        margin-top: 0;
+    }
+</style>
+
+<h4>Projects</h4>
+<p>
+    Here are some of the projects I have worked on.
+</p>
+<div class="projects-container">
+    <Project
+            title="yesyes"
+            techUsed={["Kotlin", "java", "AWS"]}
+            links={[
+                {name: "details", url: "#"},
+                {name: "details", url: "#"}]
+            }
+    >
+        <Fragment slot="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, at atque aut corporis culpa cumque
+            cupiditate dicta dignissimos doloremque eaque est et expedita facere facilis inventore laborum minus
+            necessitatibus nulla pariatur quia quis quod repellendus reprehenderit saepe sapiente tempore
+            tenetur veritatis. Aspernatur doloribus nam nihil sapiente. Culpa ipsum quos veniam!
+        </Fragment>
+    </Project>
+
+    <Project
+            title="yesyes"
+            techUsed={["Kotlin", "java", "AWS"]}
+            links={[
+                {name: "details", url: "#"},
+                {name: "details", url: "#"}]
+            }
+    >
+        <Fragment slot="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, at atque aut corporis culpa cumque
+            cupiditate dicta dignissimos doloremque eaque est et expedita facere facilis inventore laborum minus
+            necessitatibus nulla pariatur quia quis quod repellendus reprehenderit saepe sapiente tempore
+            tenetur veritatis. Aspernatur doloribus nam nihil sapiente. Culpa ipsum quos veniam!
+        </Fragment>
+    </Project>
+</div>

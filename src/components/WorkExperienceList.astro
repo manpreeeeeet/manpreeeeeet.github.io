@@ -1,0 +1,56 @@
+---
+import WorkExperience from "./WorkExperience.astro";
+---
+
+<style>
+    .list {
+        display: flex;
+        gap: 0.8rem;
+        flex-direction: column;
+    }
+
+    li {
+        padding-left: 20px;
+        text-indent: -20px;
+    }
+</style>
+
+<h4>Work Experience</h4>
+<div class="list">
+    <WorkExperience companyName="Invidi Technologies" workDate="May 2023 - Sep 2024"
+                    roleName="Software Engineer Intern">
+        <li>
+            Added new metrics and feature support for ad forecasting software on both the frontend and backend using
+            <strong>Vue.js</strong> and <strong>Kotlin</strong>.
+        </li>
+        <li>
+            Wrote code to support OAuth and migrated old systems from <strong>AWS IAM</strong> to <strong>OAuth</strong>
+        </li>
+        <li>
+            Developed back-end code using Kotlin for a centralized event notification service, used Terraform for
+            Infrastructure as Code (IaC) to deploy the service to AWS, and implemented CI/CD pipelines.
+        </li>
+        <li>
+            Wrote unit and integration tests to ensure software quality, and reduced CI build time by 20% by creating a
+            custom Docker image that allowed sharing the image between multiple CI steps.
+        </li>
+    </WorkExperience>
+    <WorkExperience companyName="Invidi Technologies" workDate="May 2023 - Sep 2024"
+                    roleName="Software Engineer Intern">
+        <li>
+            Added new metrics and feature support for ad forecasting software on both the frontend and backend using
+            <strong>Vue.js</strong> and <strong>Kotlin</strong>.
+        </li>
+        <li>
+            Wrote code to support OAuth and migrated old systems from <strong>AWS IAM</strong> to <strong>OAuth</strong>
+        </li>
+        <li>
+            Developed back-end code using Kotlin for a centralized event notification service, used Terraform for
+            Infrastructure as Code (IaC) to deploy the service to AWS, and implemented CI/CD pipelines.
+        </li>
+        <li>
+            Wrote unit and integration tests to ensure software quality, and reduced CI build time by 20% by creating a
+            custom Docker image that allowed sharing the image between multiple CI steps.
+        </li>
+    </WorkExperience>
+</div>
