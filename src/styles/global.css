@@ -248,25 +248,15 @@ html.light {
         width: 350px;
     }
 
-    .navbar {
-        display: initial;
-    }
-
-    .navbar__title {
-        text-align: center;
-    }
-
-    .navbar__menu {
-        text-align: center;
-    }
-
-    .navbar__menu > a {
-        margin: 0 11px;
-    }
-
     .pro-img {
         height: auto;
         width: 350px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 0.3fr 0.7fr;
+        margin-top: 0.8rem;
     }
 }
 
