@@ -12,6 +12,11 @@ import WorkExperience from "./WorkExperience.astro";
     li {
         padding-left: 20px;
         text-indent: -20px;
+        padding-bottom: 10px;
+    }
+
+    li:last-child {
+        padding-bottom: 0;
     }
 </style>
 
@@ -24,15 +29,14 @@ import WorkExperience from "./WorkExperience.astro";
             <strong>Vue.js</strong> and <strong>Kotlin</strong>.
         </li>
         <li>
-            Wrote code to support OAuth and migrated old systems from <strong>AWS IAM</strong> to <strong>OAuth</strong>
+            Wrote code to support OAuth to migrate old systems from <strong>AWS IAM</strong> to <strong>OAuth</strong>
         </li>
         <li>
             Developed back-end code using Kotlin for a centralized event notification service, used Terraform for
             Infrastructure as Code (IaC) to deploy the service to AWS, and implemented CI/CD pipelines.
         </li>
         <li>
-            Wrote unit and integration tests to ensure software quality, and reduced CI build time by 20% by creating a
-            custom Docker image that allowed sharing the image between multiple CI steps.
+            Wrote unit and integration tests to ensure software quality.
         </li>
     </WorkExperience>
     <WorkExperience companyName="University of Alberta" workDate="Sep 2024 - Present"

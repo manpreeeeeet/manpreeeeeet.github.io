@@ -19,7 +19,7 @@ const {techUsed, links, title} = Astro.props;
         display: flex;
         flex-direction: column;
         border: 1px solid var(--underline);
-        border-radius: 10px;
+        border-radius: 5px;
         padding: 20px;
         font-size: 1rem;
     }
@@ -40,16 +40,16 @@ const {techUsed, links, title} = Astro.props;
     }
 
     .links {
-        margin-top: 1em;
         display: flex;
-        gap: 0.5em;
+        gap: 0.3em;
     }
 
     .links a {
         border: 1px solid var(--underline);
-        padding: 10px;
+        padding: 5px;
         min-width: 5em;
         text-align: center;
+        border-radius: 5px;
     }
 
     .links a:hover {
@@ -66,7 +66,7 @@ const {techUsed, links, title} = Astro.props;
 </style>
 
 <div class="project-card">
-    <h4>{title}</h4>
+    <h5>{title}</h5>
     <div class="tech-used">
         {techUsed?.map((tech, index) => {
             if (index == techUsed.length - 1) {
