@@ -20,6 +20,33 @@ import Project from "./Project.astro";
 </p>
 <div class="projects-container">
     <Project
+            title="Statsify"
+            techUsed={["Kotlin", "React", "Typescript", "Tailwind"]}
+            links={[
+                {name: "Code", url: "https://github.com/manpreeeeeet/statsify", openLinkInNewTab: true},
+                {name: "Link", url: "https://statsify.me/", openLinkInNewTab: true},
+            ]
+            }
+    >
+        <Fragment slot="description">
+            A Spotify app that displays your top artists, songs, and fun listening stats. It helps you find
+            your most-played music and discover listening habits over time.
+        </Fragment>
+    </Project>
+
+    <Project
+            title="Portfolio"
+            techUsed={["Astro", "Markdown"]}
+            links={[
+                {name: "Code", url: "https://github.com/manpreeeeeet/manpreeeeeet.github.io", openLinkInNewTab: true}]
+            }
+    >
+        <Fragment slot="description">
+            This website! My developer website to showcase my projects, technical skills, and experience.
+        </Fragment>
+    </Project>
+
+    <Project
             title="Well Fed"
             techUsed={["Java", "Material-UI", "Firebase"]}
             links={[
